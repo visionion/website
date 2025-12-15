@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>We create better applications</title>
+  <meta name="description" content="We create better applications — thoughtful, practical software for everyday use." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="We create better applications" />
+  <meta property="og:description" content="Thoughtful, practical software built with care." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <main class="container">
+    <section class="hero">
+      <h1>We create better applications</h1>
+      <p class="subtitle">
+        Thoughtful, practical software for health, productivity, and everyday life.
+      </p>
+
+      <form class="newsletter" action="#" method="post" onsubmit="handleSubmit(event)">
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+        <button type="submit">Join the newsletter</button>
+      </form>
+
+      <p class="fine-print">
+        No spam. Just updates when we ship something worth sharing.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Better Applications</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
