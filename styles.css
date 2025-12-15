@@ -44,8 +44,14 @@
   
   .newsletter {
     display: flex;
+    flex-direction: column;
     gap: 0.75rem;
     margin-bottom: 0.75rem;
+  }
+
+  .newsletter-inputs {
+    display: flex;
+    gap: 0.75rem;
   }
   
   .newsletter input {
@@ -55,6 +61,13 @@
     border: 1px solid #2a2d34;
     background: #16181d;
     color: var(--fg);
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+  }
+
+  .newsletter input:focus {
+    outline: none;
+    border-color: var(--accent);
   }
   
   .newsletter input::placeholder {
@@ -68,11 +81,42 @@
     background: var(--accent);
     color: #000;
     font-weight: 600;
+    font-size: 1rem;
     cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.1s ease;
   }
   
   .newsletter button:hover {
     opacity: 0.9;
+  }
+
+  .newsletter button:active {
+    transform: scale(0.98);
+  }
+
+  .newsletter button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .newsletter-message {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    min-height: 1.4rem;
+  }
+
+  .newsletter-message.success {
+    color: #4ade80;
+  }
+
+  .newsletter-message.error {
+    color: #f87171;
+  }
+
+  @media (max-width: 600px) {
+    .newsletter-inputs {
+      flex-direction: column;
+    }
   }
   
   .fine-print {

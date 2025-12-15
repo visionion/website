@@ -22,15 +22,26 @@
         Thoughtful, practical software for health, productivity, and everyday life.
       </p>
 
-      <form class="newsletter" action="#" method="post" onsubmit="handleSubmit(event)">
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter your email"
-          required
-        />
-        <button type="submit">Join the newsletter</button>
+      <form class="newsletter" action="#" method="post" onsubmit="handleSubmit(event)" id="newsletterForm">
+        <div class="newsletter-inputs">
+          <input
+            type="text"
+            name="name"
+            placeholder="Your name"
+            required
+            autocomplete="name"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+            autocomplete="email"
+          />
+        </div>
+        <button type="submit" id="submitBtn">Join the newsletter</button>
       </form>
+      <p class="newsletter-message" id="newsletterMessage"></p>
 
       <p class="fine-print">
         No spam. Just updates when we ship something worth sharing.
