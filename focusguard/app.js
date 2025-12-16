@@ -8,7 +8,7 @@ const CONFIG = {
   app: 'focusguard',
   googleClientId: '387675057644-69k4lh4j6m5hronf3eunp6qd1i4ulmfj.apps.googleusercontent.com',
   authApiUrl: 'https://e44zma7ej4d6uqov3zlf33sbre0oyvtj.lambda-url.us-east-1.on.aws/',
-  paymentApiUrl: 'YOUR_PAYMENT_FUNCTION_URL', // Will be set after deployment
+  paymentApiUrl: 'https://ixdhoc66ueb3bghpukzesddwsa0ovofg.lambda-url.us-east-1.on.aws/',
   razorpayKeyId: 'rzp_live_RsDxhp7JcQFQAl', // Replace with actual key
   pricing: {
     yearly: {
