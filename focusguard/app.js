@@ -142,7 +142,7 @@ async function handleGoogleSignIn(response) {
       };
 
       // Store session
-      sessionStorage.setItem('focusguard_user', JSON.stringify(currentUser));
+      localStorage.setItem('focusguard_user', JSON.stringify(currentUser));
       
       updateUI();
       await checkSubscriptionStatus();
@@ -160,14 +160,14 @@ async function handleGoogleSignIn(response) {
 
 // Check for stored session
 async function checkStoredSession() {
-  const stored = sessionStorage.getItem('focusguard_user');
+  const stored = localStorage.getItem('focusguard_user');
   if (stored) {
     try {
       currentUser = JSON.parse(stored);
       updateUI();
       await checkSubscriptionStatus();
     } catch (e) {
-      sessionStorage.removeItem('focusguard_user');
+      localStorage.removeItem('focusguard_user');
     }
   }
 }

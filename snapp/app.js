@@ -142,7 +142,7 @@ async function handleGoogleSignIn(response) {
       };
 
       // Store session
-      sessionStorage.setItem('snapp_user', JSON.stringify(currentUser));
+      localStorage.setItem('snapp_user', JSON.stringify(currentUser));
       
       updateUI();
       await checkSubscriptionStatus();
@@ -160,14 +160,14 @@ async function handleGoogleSignIn(response) {
 
 // Check for stored session
 async function checkStoredSession() {
-  const stored = sessionStorage.getItem('snapp_user');
+  const stored = localStorage.getItem('snapp_user');
   if (stored) {
     try {
       currentUser = JSON.parse(stored);
       updateUI();
       await checkSubscriptionStatus();
     } catch (e) {
-      sessionStorage.removeItem('snapp_user');
+      localStorage.removeItem('snapp_user');
     }
   }
 }
