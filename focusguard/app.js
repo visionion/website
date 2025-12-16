@@ -68,13 +68,23 @@ function setYear() {
   }
 }
 
-// Initialize Google Sign-In
-function initGoogleSignIn() {
-  if (typeof google === 'undefined') {
-    console.warn('Google Sign-In SDK not loaded');
+// Initialize Google Sign-In with retry mechanism
+function initGoogleSignIn(retryCount = 0) {
+  const maxRetries = 10;
+  const retryDelay = 300; // ms
+
+  if (typeof google === 'undefined' || typeof google.accounts === 'undefined') {
+    if (retryCount < maxRetries) {
+      console.log(`Google Sign-In SDK not loaded yet, retrying... (${retryCount + 1}/${maxRetries})`);
+      setTimeout(() => initGoogleSignIn(retryCount + 1), retryDelay);
+    } else {
+      console.error('Google Sign-In SDK failed to load after max retries');
+    }
     return;
   }
 
+  console.log('Google Sign-In SDK loaded, initializing...');
+  
   google.accounts.id.initialize({
     client_id: CONFIG.googleClientId,
     callback: handleGoogleSignIn,
@@ -82,15 +92,19 @@ function initGoogleSignIn() {
     cancel_on_tap_outside: true
   });
 
-  google.accounts.id.renderButton(
-    document.getElementById('googleSignInBtn'),
-    {
-      theme: 'filled_black',
-      size: 'large',
-      width: 280,
-      text: 'continue_with'
-    }
-  );
+  const buttonContainer = document.getElementById('googleSignInBtn');
+  if (buttonContainer) {
+    google.accounts.id.renderButton(
+      buttonContainer,
+      {
+        theme: 'filled_black',
+        size: 'large',
+        width: 280,
+        text: 'continue_with'
+      }
+    );
+    console.log('Google Sign-In button rendered');
+  }
 }
 
 // Handle Google Sign-In callback
