@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EnduroTrack — Health Insights (iOS)</title>
+  <meta name="description" content="EnduroTrack helps you understand wellness and activity trends with privacy-forward insights. Not medical advice. Subscriptions in USD via Stripe." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="EnduroTrack — Health Insights" />
+  <meta property="og:description" content="Understand your wellness and activity trends. Not medical advice." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://visionion.dev/endurotrack/" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <span class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4.5 12.75l4.5-6 4.5 6 4.5-9" />
+            <path d="M3 20h18" />
+          </svg>
+        </span>
+        <span class="logo-text">EnduroTrack</span>
+      </a>
+      <div class="nav-right">
+        <a href="/" class="nav-link">Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <div class="hero-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4.5 12.75l4.5-6 4.5 6 4.5-9" />
+            <path d="M3 20h18" />
+          </svg>
+        </div>
+        <h1 class="hero-title">EnduroTrack</h1>
+        <p class="hero-subtitle">
+          A health insights iOS app (in development) that helps you better understand wellness and activity trends.
+          This is not medical advice or an emergency service. Subscriptions will be billed in USD via Stripe.
+        </p>
+      </div>
+    </section>
+
+    <div class="main-content">
+      <!-- Features -->
+      <section class="features-section">
+        <h2 class="features-title">What you'll get</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 3v18h18" />
+                <path d="M19 9l-5 5-4-4-3 3" />
+              </svg>
+            </div>
+            <h3>Trends & Insights</h3>
+            <p>Clear visualizations for daily, weekly, and monthly patterns that are easy to act on.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <h3>Readiness Signals</h3>
+            <p>Balanced view of load, recovery, and sleep signals to help plan your day.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 7h18M3 12h18M3 17h18"/>
+              </svg>
+            </div>
+            <h3>Privacy-first</h3>
+            <p>Local-first philosophy with sensible defaults. Your data should work for you.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <h3>Human-friendly</h3>
+            <p>Explains what changed in plain language — avoiding jargon and overconfidence.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section">
+        <div class="cta-card">
+          <h3>Be the first to know</h3>
+          <p>EnduroTrack is in active development. Join the waitlist — we’ll email when it’s ready.</p>
+          <a href="/#newsletter" class="btn btn-primary">Join waitlist</a>
+        </div>
+      </section>
+
+      <!-- Disclaimer -->
+      <section class="disclaimer-section">
+        <div class="disclaimer-card">
+          <h4>Important</h4>
+          <p>
+            EnduroTrack provides informational insights only. It does not provide medical advice, diagnosis, treatment,
+            or emergency services. Always consult a qualified professional for medical questions.
+          </p>
+          <p class="muted">
+            Billing: Subscriptions will be billed in USD via Stripe. Invoicing and refunds will be handled by Stripe.
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer-copy">© <span id="year"></span> Visionion. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms-and-conditions.html">Terms</a>
+        <a href="/refund-policy.html">Refunds</a>
+        <a href="/contact-us.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const y=document.getElementById('year'); if(y){ y.textContent=new Date().getFullYear(); }
+  </script>
+</body>
+</html>
+
+

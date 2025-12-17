@@ -19,9 +19,6 @@
 
   <!-- Google Sign-In -->
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-  
-  <!-- Razorpay -->
-  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -84,8 +81,8 @@
         </div>
         <h1 class="hero-title">Snapp Premium</h1>
         <p class="hero-subtitle">
-          Unlock powerful screenshot tools — blur sensitive info, add stickers, 
-          auto-stamp URLs and dates, and export with smart PDF splitting.
+          A full-page screenshot tool with a built‑in editor for annotation and privacy.
+          Premium subscriptions will be billed in USD via Stripe. Refunds will be handled by Stripe.
         </p>
       </div>
     </section>
@@ -195,79 +192,14 @@
           </div>
         </div>
 
-        <!-- Pricing Section (shown when not premium) -->
+        <!-- Pricing / Billing Info (shown when not premium) -->
         <div id="pricingSection" class="pricing-section">
-          <h2 class="pricing-title">Choose Your Plan</h2>
-          <p class="pricing-subtitle">One-time payment or yearly subscription. Cancel anytime.</p>
-          
-          <div class="pricing-grid">
-            <!-- Yearly Plan -->
-            <div class="pricing-card popular">
-              <div class="popular-badge">Most Popular</div>
-              <div class="plan-header">
-                <h3 class="plan-name">Yearly</h3>
-                <div class="plan-price">
-                  <span class="price-amount">₹199</span>
-                  <span class="price-period">/year</span>
-                </div>
-                <p class="plan-savings">Save 33% vs monthly equivalent</p>
-              </div>
-              <ul class="plan-features">
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  All premium features
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Renews annually
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Priority support
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Cancel anytime
-                </li>
-              </ul>
-              <button class="btn btn-primary plan-btn" data-plan="yearly" onclick="handlePurchase('yearly')">
-                Subscribe Yearly
-              </button>
-            </div>
-
-            <!-- Lifetime Plan -->
-            <div class="pricing-card">
-              <div class="plan-header">
-                <h3 class="plan-name">Lifetime</h3>
-                <div class="plan-price">
-                  <span class="price-amount">₹299</span>
-                  <span class="price-period">one-time</span>
-                </div>
-                <p class="plan-savings">Pay once, use forever</p>
-              </div>
-              <ul class="plan-features">
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  All premium features
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  Lifetime access
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  All future updates
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  No recurring charges
-                </li>
-              </ul>
-              <button class="btn btn-secondary plan-btn" data-plan="one_time" onclick="handlePurchase('one_time')">
-                Buy Lifetime
-              </button>
-            </div>
-          </div>
+          <h2 class="pricing-title">Pricing & Plans (USD)</h2>
+          <p class="pricing-subtitle">
+            Premium subscriptions will be billed in USD via Stripe. Invoicing and refunds will be handled by Stripe.
+            Pricing will be announced soon. Cancel anytime.
+          </p>
+          <a href="/#newsletter" class="btn btn-secondary">Join waitlist</a>
         </div>
 
         <!-- Already Premium Section -->
