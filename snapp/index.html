@@ -20,6 +20,9 @@
   <!-- Google Sign-In -->
   <script src="https://accounts.google.com/gsi/client" async defer></script>
 
+  <!-- Razorpay Checkout -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -82,7 +85,7 @@
         <h1 class="hero-title">Snapp Premium</h1>
         <p class="hero-subtitle">
           A full-page screenshot tool with a built‑in editor for annotation and privacy.
-          Premium subscriptions will be billed in USD via Stripe. Refunds will be handled by Stripe.
+          Premium subscriptions billed in USD via Razorpay.
         </p>
       </div>
     </section>
@@ -194,12 +197,57 @@
 
         <!-- Pricing / Billing Info (shown when not premium) -->
         <div id="pricingSection" class="pricing-section">
-          <h2 class="pricing-title">Pricing & Plans (USD)</h2>
+          <h2 class="pricing-title">Go Premium</h2>
           <p class="pricing-subtitle">
-            Premium subscriptions will be billed in USD via Stripe. Invoicing and refunds will be handled by Stripe.
-            Pricing will be announced soon. Cancel anytime.
+            One-time payment, lifetime access. Billed in USD via Razorpay.
           </p>
-          <a href="/#newsletter" class="btn btn-secondary">Join waitlist</a>
+          <div class="pricing-single">
+            <div class="pricing-card featured">
+              <div class="pricing-card-header">
+                <h3 class="pricing-card-title">Lifetime Access</h3>
+                <p class="pricing-card-description">One-time payment, forever yours</p>
+              </div>
+              <div class="pricing-card-price">
+                <span class="price-amount">$15</span>
+                <span class="price-period">USD one-time</span>
+              </div>
+              <ul class="pricing-card-features">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20,6 9,17 4,12"/>
+                  </svg>
+                  All premium features forever
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20,6 9,17 4,12"/>
+                  </svg>
+                  Blur tool for privacy
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20,6 9,17 4,12"/>
+                  </svg>
+                  Sticker library
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20,6 9,17 4,12"/>
+                  </svg>
+                  Future updates included
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20,6 9,17 4,12"/>
+                  </svg>
+                  Priority support
+                </li>
+              </ul>
+              <button onclick="handlePurchase('one_time')" class="btn btn-primary pricing-btn">
+                Get Lifetime Access
+              </button>
+            </div>
+          </div>
         </div>
 
         <!-- Already Premium Section -->

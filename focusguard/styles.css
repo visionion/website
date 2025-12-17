@@ -11,10 +11,11 @@
   --border-color: #27272a;
   --border-subtle: #3f3f46;
   
-  --accent: #10b981;
-  --accent-hover: #059669;
-  --accent-dim: rgba(16, 185, 129, 0.15);
-  --accent-glow: rgba(16, 185, 129, 0.3);
+  /* Violet accent - matching Snapp's premium look */
+  --accent: #8b5cf6;
+  --accent-hover: #7c3aed;
+  --accent-dim: rgba(139, 92, 246, 0.15);
+  --accent-glow: rgba(139, 92, 246, 0.3);
   
   --success: #10b981;
   --error: #ef4444;
@@ -395,7 +396,7 @@ body {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.25rem;
 }
 
@@ -457,11 +458,18 @@ body {
   margin-bottom: 2rem;
 }
 
-.pricing-grid {
+.pricing-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   max-width: 700px;
+  margin: 0 auto;
+}
+
+.pricing-single {
+  display: flex;
+  justify-content: center;
+  max-width: 400px;
   margin: 0 auto;
 }
 
@@ -473,11 +481,117 @@ body {
   padding: 2rem;
   text-align: left;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .pricing-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.4);
+}
+
+.pricing-card.featured {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent), 0 20px 50px -15px var(--accent-glow);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.35rem 1rem;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pricing-card-header {
+  margin-bottom: 1rem;
+}
+
+.pricing-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.pricing-card-description {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.pricing-card-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.price-amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.price-period {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+/* Pricing feature list - clean without bullets */
+.pricing-card-features {
+  list-style: none !important;
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+}
+
+.pricing-card-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  list-style: none !important;
+}
+
+.pricing-card-features li::before {
+  display: none !important;
+  content: none !important;
+}
+
+.pricing-card-features li::marker {
+  display: none !important;
+  content: none !important;
+}
+
+.pricing-card-features svg {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.pricing-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Legacy pricing classes for compatibility */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .pricing-card.popular {
@@ -492,7 +606,7 @@ body {
   transform: translateX(-50%);
   padding: 0.35rem 1rem;
   background: var(--accent);
-  color: #000;
+  color: #fff;
   font-size: 0.75rem;
   font-weight: 600;
   border-radius: 100px;
@@ -519,17 +633,6 @@ body {
   margin-bottom: 0.25rem;
 }
 
-.price-amount {
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.price-period {
-  font-size: 1rem;
-  color: var(--text-muted);
-}
-
 .plan-savings {
   font-size: 0.85rem;
   color: var(--accent);
@@ -538,6 +641,7 @@ body {
 .plan-features {
   list-style: none;
   margin-bottom: 1.5rem;
+  padding: 0;
 }
 
 .plan-features li {
@@ -579,7 +683,7 @@ body {
 
 .btn-primary {
   background: var(--accent);
-  color: #000;
+  color: #fff;
 }
 
 .btn-primary:hover {
@@ -794,4 +898,3 @@ body {
     grid-template-columns: 1fr;
   }
 }
-

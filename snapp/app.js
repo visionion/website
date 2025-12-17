@@ -6,18 +6,14 @@
 // Configuration
 const CONFIG = {
   app: 'snapp',
-  googleClientId: '387675057644-69k4lh4j6m5hronf3eunp6qd1i4ulmfj.apps.googleusercontent.com', // Replace with actual client ID
+  googleClientId: '387675057644-69k4lh4j6m5hronf3eunp6qd1i4ulmfj.apps.googleusercontent.com',
   authApiUrl: 'https://e44zma7ej4d6uqov3zlf33sbre0oyvtj.lambda-url.us-east-1.on.aws/',
   paymentApiUrl: 'https://ixdhoc66ueb3bghpukzesddwsa0ovofg.lambda-url.us-east-1.on.aws/',
-  razorpayKeyId: 'rzp_live_RsDxhp7JcQFQAl', // Replace with actual key
+  razorpayKeyId: 'rzp_live_RsDxhp7JcQFQAl',
+  currency: 'USD',
   pricing: {
-    yearly: {
-      amount: 19900, // in paise (₹199)
-      description: 'Snapp Premium - Yearly',
-      duration: '1 year'
-    },
     one_time: {
-      amount: 29900, // in paise (₹299)
+      amount: 1500, // in cents ($15 USD)
       description: 'Snapp Premium - Lifetime',
       duration: 'Lifetime'
     }
@@ -194,7 +190,7 @@ async function handleSignOut() {
     // Clear local session
     currentUser = null;
     subscriptionStatus = null;
-    sessionStorage.removeItem('snapp_user');
+    localStorage.removeItem('snapp_user');
     
     updateUI();
     showToast('Signed out successfully', 'success');
@@ -335,7 +331,7 @@ function openRazorpayCheckout(orderId, plan, planType) {
   const options = {
     key: CONFIG.razorpayKeyId,
     amount: plan.amount,
-    currency: 'INR',
+    currency: CONFIG.currency,
     name: 'Snapp',
     description: plan.description,
     order_id: orderId,

@@ -9,15 +9,11 @@ const CONFIG = {
   googleClientId: '387675057644-69k4lh4j6m5hronf3eunp6qd1i4ulmfj.apps.googleusercontent.com',
   authApiUrl: 'https://e44zma7ej4d6uqov3zlf33sbre0oyvtj.lambda-url.us-east-1.on.aws/',
   paymentApiUrl: 'https://ixdhoc66ueb3bghpukzesddwsa0ovofg.lambda-url.us-east-1.on.aws/',
-  razorpayKeyId: 'rzp_live_RsDxhp7JcQFQAl', // Replace with actual key
+  razorpayKeyId: 'rzp_live_RsDxhp7JcQFQAl',
+  currency: 'USD',
   pricing: {
-    yearly: {
-      amount: 19900, // in paise (₹199)
-      description: 'FocusGuard Premium - Yearly',
-      duration: '1 year'
-    },
     one_time: {
-      amount: 29900, // in paise (₹299)
+      amount: 1500, // in cents ($15 USD)
       description: 'FocusGuard Premium - Lifetime',
       duration: 'Lifetime'
     }
@@ -194,7 +190,7 @@ async function handleSignOut() {
     // Clear local session
     currentUser = null;
     subscriptionStatus = null;
-    sessionStorage.removeItem('focusguard_user');
+    localStorage.removeItem('focusguard_user');
     
     updateUI();
     showToast('Signed out successfully', 'success');
@@ -335,7 +331,7 @@ function openRazorpayCheckout(orderId, plan, planType) {
   const options = {
     key: CONFIG.razorpayKeyId,
     amount: plan.amount,
-    currency: 'INR',
+    currency: CONFIG.currency,
     name: 'FocusGuard',
     description: plan.description,
     order_id: orderId,
@@ -349,7 +345,7 @@ function openRazorpayCheckout(orderId, plan, planType) {
       userId: currentUser.userId
     },
     theme: {
-      color: '#10b981'
+      color: '#8b5cf6'
     },
     handler: function(response) {
       handlePaymentSuccess(response, planType);
@@ -521,4 +517,3 @@ function decodeJWT(token) {
 
 // Expose handlePurchase to global scope for onclick handlers
 window.handlePurchase = handlePurchase;
-
