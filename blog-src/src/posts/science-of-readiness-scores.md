@@ -133,3 +133,4 @@ Used well, they can help you train smarter, recover better, and avoid pushing to
 
 The technology continues to improve, and the science behind these metrics is solid. But the numbers are always in service of the goal: a healthier, more balanced you. Don't let the score become the point.
 
+

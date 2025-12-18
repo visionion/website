@@ -162,3 +162,4 @@ Good documentation respects developers' time. A clear bug report can turn a week
 
 Next time you encounter a bug, take the extra few minutes to document it properly. Both you and the development team will be glad you did.
 
+

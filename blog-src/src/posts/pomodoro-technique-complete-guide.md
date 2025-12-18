@@ -74,3 +74,4 @@ You don't need special tools to try the Pomodoro Technique. Use your phone timer
 
 The goal isn't to fill every minute with productivity theater. It's to create conditions where focused work becomes natural and sustainable. The Pomodoro Technique is one of the simplest, most effective ways to do exactly that.
 
+

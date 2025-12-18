@@ -106,3 +106,4 @@ HRV is a useful window into your autonomic nervous system and overall recovery s
 
 The key is using it wisely: establish your baseline, watch for trends, consider context, and don't let the numbers become a source of stress themselves.
 
+

@@ -155,3 +155,4 @@ Basic image-to-PDF conversion is available everywhere, but dedicated screenshot 
 
 If you regularly create documentation or reports from screenshots, investing in a proper tool saves significant time.
 
+

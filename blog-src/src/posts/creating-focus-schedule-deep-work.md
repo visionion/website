@@ -105,3 +105,4 @@ The schedule is just a container. What matters is what you put into those focuse
 
 Start with one protected hour of deep work per day. Once that becomes habitual, expand. Before long, deep work will feel like the norm rather than the exception.
 
+

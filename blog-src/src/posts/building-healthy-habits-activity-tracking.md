@@ -132,3 +132,4 @@ The purpose of activity tracking isn't to hit numbers—it's to live a healthier
 
 Use data to build awareness and motivation in the early stages. As habits solidify, let the tracker fade into the background. The numbers were always just a tool; your health is the goal.
 
+

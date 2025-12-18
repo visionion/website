@@ -150,3 +150,4 @@ If you're unsure whether something should be blurred, blur it. The minor inconve
 
 Privacy and security aren't just nice-to-haves—they're essential. A few extra seconds of careful redaction can prevent serious problems down the road.
 
+

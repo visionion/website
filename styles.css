@@ -15,6 +15,8 @@
   --accent-focusguard-dim: rgba(16, 185, 129, 0.15);
   --accent-snapp: #8b5cf6;
   --accent-snapp-dim: rgba(139, 92, 246, 0.15);
+  --accent-converter: #6366f1;
+  --accent-converter-dim: rgba(99, 102, 241, 0.15);
   
   --radius-sm: 6px;
   --radius-md: 10px;
@@ -287,6 +289,14 @@ body {
   background: radial-gradient(ellipse at top, var(--accent-snapp-dim) 0%, transparent 70%);
 }
 
+.converter-card:hover {
+  box-shadow: 0 20px 60px -15px rgba(99, 102, 241, 0.2);
+}
+
+.converter-card .app-card-glow {
+  background: radial-gradient(ellipse at top, var(--accent-converter-dim) 0%, transparent 70%);
+}
+
 .app-icon {
   width: 64px;
   height: 64px;
@@ -310,6 +320,11 @@ body {
 .snapp-icon {
   background: var(--accent-snapp-dim);
   color: var(--accent-snapp);
+}
+
+.converter-icon {
+  background: var(--accent-converter-dim);
+  color: var(--accent-converter);
 }
 
 .app-content {
@@ -364,6 +379,10 @@ body {
 
 .snapp-card .app-features svg {
   color: var(--accent-snapp);
+}
+
+.converter-card .app-features svg {
+  color: var(--accent-converter);
 }
 
 .app-actions {

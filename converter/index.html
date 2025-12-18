@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Any-to-Any Converter Premium - 200+ File Conversions</title>
+  <meta name="description" content="Any-to-Any Converter Premium - Unlimited file conversions. Images, PDFs, Documents, QR Codes & more. $15 lifetime access." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://visionion.dev/converter/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Any-to-Any Converter Premium" />
+  <meta property="og:description" content="200+ file conversions with unlimited access. $15 one-time payment." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://visionion.dev/converter/" />
+  <meta property="og:image" content="https://visionion.dev/converter/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Any-to-Any Converter Premium" />
+  <meta name="twitter:description" content="200+ file conversions with unlimited access." />
+  <meta name="twitter:image" content="https://visionion.dev/converter/og-image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%236366f1'/%3E%3Cpath d='M8 12h6l-3 4 3 4H8l-3-4 3-4z' fill='%23fff'/%3E%3Cpath d='M18 12h6l-3 4 3 4h-6l3-4-3-4z' fill='%23fff'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Google Sign-In -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+  <!-- Razorpay Checkout -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <span class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 8h4l-2 3 2 3H4l-2-3 2-3z"/>
+            <path d="M14 8h4l-2 3 2 3h-4l2-3-2-3z"/>
+            <path d="M10 6v12M22 12h-4"/>
+          </svg>
+        </span>
+        <span class="logo-text">Any-to-Any</span>
+      </a>
+      <div class="nav-right">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <div id="userMenu" class="user-menu" style="display: none;">
+          <button class="user-btn" id="userBtn">
+            <img id="userAvatar" src="" alt="User" class="user-avatar" />
+            <span id="userName">User</span>
+            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+          <div class="user-dropdown" id="userDropdown">
+            <div class="user-info">
+              <img id="dropdownAvatar" src="" alt="User" class="dropdown-avatar" />
+              <div>
+                <p id="dropdownName" class="dropdown-name">User</p>
+                <p id="dropdownEmail" class="dropdown-email">email@example.com</p>
+              </div>
+            </div>
+            <hr class="dropdown-divider" />
+            <button id="signOutBtn" class="dropdown-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/>
+              </svg>
+              Sign Out
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <div class="hero-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 8h4l-2 3 2 3H4l-2-3 2-3z"/>
+            <path d="M14 8h4l-2 3 2 3h-4l2-3-2-3z"/>
+            <path d="M10 6v12M22 12h-4"/>
+          </svg>
+        </div>
+        <h1 class="hero-title">Any-to-Any Converter</h1>
+        <p class="hero-subtitle">
+          200+ file conversions at your fingertips. Images, PDFs, documents, QR codes & more.
+          All processing happens locally for maximum privacy.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Not Signed In State -->
+      <section id="signedOutSection" class="auth-section">
+        <div class="auth-card">
+          <h2 class="auth-title">Sign in to continue</h2>
+          <p class="auth-subtitle">Use your Google account to access Any-to-Any Converter Premium.</p>
+          
+          <div id="googleSignInBtn" class="google-signin-container"></div>
+          
+          <p class="auth-note">
+            Your data is secure. We only access your basic profile information.
+          </p>
+        </div>
+      </section>
+
+      <!-- Signed In State -->
+      <section id="signedInSection" class="dashboard-section" style="display: none;">
+        <!-- Subscription Status Card -->
+        <div class="status-card" id="statusCard">
+          <div class="status-header">
+            <div class="status-badge" id="statusBadge">
+              <span class="status-dot"></span>
+              <span id="statusText">Checking...</span>
+            </div>
+          </div>
+          <div id="premiumInfo" style="display: none;">
+            <p class="premium-expires" id="premiumExpires"></p>
+          </div>
+        </div>
+
+        <!-- Premium Features -->
+        <div class="features-section">
+          <h2 class="features-title">Premium Features</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+              </div>
+              <h3>Unlimited Conversions</h3>
+              <p>No daily limits. Convert as many files as you need, anytime.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="23 7 16 12 23 17 23 7"/>
+                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                </svg>
+              </div>
+              <h3>Video & Audio</h3>
+              <p>Convert video and audio files between popular formats.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                  <line x1="6" y1="6" x2="6.01" y2="6"/>
+                  <line x1="6" y1="18" x2="6.01" y2="18"/>
+                </svg>
+              </div>
+              <h3>Batch Processing</h3>
+              <p>Process up to 20 files at once for maximum productivity.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                  <polyline points="17 8 12 3 7 8"/>
+                  <line x1="12" y1="3" x2="12" y2="15"/>
+                </svg>
+              </div>
+              <h3>100MB File Size</h3>
+              <p>Upload files up to 100MB, 10x larger than free tier.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                  <rect x="7" y="7" width="3" height="9"/>
+                  <rect x="14" y="7" width="3" height="5"/>
+                </svg>
+              </div>
+              <h3>All 200+ Conversions</h3>
+              <p>Access every conversion type including premium-only formats.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+              </div>
+              <h3>Priority Support</h3>
+              <p>Get faster responses and dedicated support for any issues.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pricing / Billing Info (shown when not premium) -->
+        <div id="pricingSection" class="pricing-section">
+          <h2 class="pricing-title">Go Premium</h2>
+          <p class="pricing-subtitle">
+            One-time payment, lifetime access. No subscriptions, no recurring fees.
+          </p>
+          <div class="pricing-single">
+            <div class="pricing-card featured">
+              <div class="pricing-card-header">
+                <h3 class="pricing-card-title">Lifetime Access</h3>
+                <p class="pricing-card-description">One-time payment, forever yours</p>
+              </div>
+              <div class="pricing-card-price">
+                <span class="price-amount">$15</span>
+                <span class="price-period">USD one-time</span>
+              </div>
+              <ul class="pricing-card-features">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20,6 9,17 4,12"/>
+                  </svg>
+                  Unlimited conversions forever
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20,6 9,17 4,12"/>
+                  </svg>
+                  Video & Audio support
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20,6 9,17 4,12"/>
+                  </svg>
+                  Batch processing (20 files)
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20,6 9,17 4,12"/>
+                  </svg>
+                  100MB file size limit
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20,6 9,17 4,12"/>
+                  </svg>
+                  Future updates included
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20,6 9,17 4,12"/>
+                  </svg>
+                  Priority support
+                </li>
+              </ul>
+              <button onclick="handlePurchase('lifetime')" class="btn btn-primary pricing-btn">
+                Get Lifetime Access
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Already Premium Section -->
+        <div id="premiumActiveSection" class="premium-active-section" style="display: none;">
+          <div class="premium-active-card">
+            <div class="premium-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                <polyline points="22,4 12,14.01 9,11.01"/>
+              </svg>
+            </div>
+            <h3>You're all set!</h3>
+            <p>Thank you for being an Any-to-Any Converter Premium member. Enjoy all premium features in the extension.</p>
+            <p class="sync-note">Open the extension and click "Sync Status" to activate premium features.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer-copy">© <span id="year"></span> Visionion. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/converter/privacy-policy.html">Privacy</a>
+        <a href="/converter/terms.html">Terms</a>
+        <a href="/converter/refund-policy.html">Refunds</a>
+        <a href="/converter/contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Loading Overlay -->
+  <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+    <div class="loading-spinner"></div>
+    <p class="loading-text">Processing...</p>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+

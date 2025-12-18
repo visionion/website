@@ -128,3 +128,4 @@ Progress in fitness is measured in months and years, not days and weeks. A singl
 
 Recovery isn't weakness. It's where adaptation happens. Treat it with the same respect you give training, and you'll see better results with less suffering.
 
+

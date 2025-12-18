@@ -110,3 +110,4 @@ Once you've captured a full-page screenshot, you'll often need to annotate it—
 
 The best screenshot tool is the one that fits your workflow. If you find yourself taking full-page screenshots regularly, investing in a dedicated tool pays off quickly in time saved.
 
+
