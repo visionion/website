@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — FocusGuard</title>
+  <meta name="description" content="Contact FocusGuard support for help, feedback, or inquiries." />
+
+  <meta property="og:title" content="Contact — FocusGuard" />
+  <meta property="og:description" content="Get in touch with FocusGuard support." />
+  <meta property="og:type" content="article" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    :root {
+      --accent-app: #10b981;
+      --accent-app-dim: rgba(16, 185, 129, 0.15);
+    }
+    .page-content ul li::before { background: var(--accent-app); }
+    .page-content a { color: var(--accent-app); }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/focusguard/" class="nav-logo">
+        <span class="logo-icon" style="background: var(--accent-app-dim); color: var(--accent-app);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </span>
+        <span class="logo-text">FocusGuard</span>
+      </a>
+      <div class="nav-links">
+        <a href="/" class="nav-link">Visionion</a>
+        <a href="/focusguard/" class="nav-link">Premium</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-container">
+    <a href="/focusguard/" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Back to FocusGuard
+    </a>
+
+    <header class="page-header">
+      <h1 class="page-title">Contact FocusGuard</h1>
+      <p class="page-subtitle">We'd love to hear from you</p>
+    </header>
+
+    <div class="page-content">
+      <h2>Get in touch</h2>
+      <p>
+        For FocusGuard support, feedback, or general inquiries, email us at <a href="mailto:info@visionion.dev">info@visionion.dev</a>.
+      </p>
+
+      <h2>Support requests</h2>
+      <p>
+        Having issues with FocusGuard? Please include:
+      </p>
+      <ul>
+        <li>Your browser name and version (e.g., Chrome 120)</li>
+        <li>FocusGuard version (found in extension settings)</li>
+        <li>A description of the issue</li>
+        <li>Screenshots if helpful</li>
+      </ul>
+
+      <h2>Premium support</h2>
+      <p>
+        FocusGuard Premium users receive priority support. Please include your purchase email in your message for faster assistance.
+      </p>
+
+      <h2>Response time</h2>
+      <p>
+        We typically respond within 1–2 business days.
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer-copy">© <span id="year"></span> Visionion. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/focusguard/privacy-policy.html">Privacy</a>
+        <a href="/focusguard/terms.html">Terms</a>
+        <a href="/focusguard/refund-policy.html">Refunds</a>
+        <a href="/focusguard/contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+

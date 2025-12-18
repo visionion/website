@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — FocusGuard</title>
+  <meta name="description" content="Privacy Policy for FocusGuard. We do not collect or sell your personal data." />
+
+  <meta property="og:title" content="Privacy Policy — FocusGuard" />
+  <meta property="og:description" content="FocusGuard does not collect or sell your personal data." />
+  <meta property="og:type" content="article" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    :root {
+      --accent-app: #10b981;
+      --accent-app-dim: rgba(16, 185, 129, 0.15);
+    }
+    .page-content ul li::before { background: var(--accent-app); }
+    .page-content a { color: var(--accent-app); }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/focusguard/" class="nav-logo">
+        <span class="logo-icon" style="background: var(--accent-app-dim); color: var(--accent-app);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </span>
+        <span class="logo-text">FocusGuard</span>
+      </a>
+      <div class="nav-links">
+        <a href="/" class="nav-link">Visionion</a>
+        <a href="/focusguard/" class="nav-link">Premium</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-container">
+    <a href="/focusguard/" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Back to FocusGuard
+    </a>
+
+    <header class="page-header">
+      <h1 class="page-title">FocusGuard Privacy Policy</h1>
+      <p class="page-subtitle">Last updated: December 15, 2025</p>
+    </header>
+
+    <div class="page-content">
+      <p>
+        FocusGuard is a site blocker built to help you stay focused. We designed it to respect your privacy.
+        FocusGuard does <strong>not</strong> collect, transmit, or sell your personal data.
+      </p>
+
+      <h2>What data is stored</h2>
+      <p>
+        FocusGuard stores settings and usage information <strong>locally on your device</strong> using the browser's storage.
+        This data never leaves your device unless you explicitly export it. Examples include:
+      </p>
+      <ul>
+        <li>Blocked sites, whitelist, and categories you choose</li>
+        <li>Schedules and Focus Mode timers</li>
+        <li>Usage limits per site and minutes used (for enforcement)</li>
+        <li>Local insights counters (e.g., number of blocked attempts)</li>
+        <li>Extension preferences and settings</li>
+        <li>Optional lock password (stored as a one-way hash) and hint</li>
+      </ul>
+
+      <h2>Permissions we request and why</h2>
+      <ul>
+        <li><strong>storage</strong>: Save your preferences and data locally</li>
+        <li><strong>tabs</strong> and <strong>activeTab</strong>: Determine the current site to enforce your rules</li>
+        <li><strong>alarms</strong>: Run scheduled tasks (e.g., focus sessions, resets)</li>
+        <li><strong>declarativeNetRequest</strong> (+ feedback): Efficiently block matching sites by rule</li>
+        <li><strong>host permissions: <code>&lt;all_urls&gt;</code></strong>: Allow blocking on sites you choose across the web</li>
+      </ul>
+      <p>
+        These permissions are used solely to provide core blocking functionality. FocusGuard does not send this information to external servers.
+      </p>
+
+      <h2>Premium accounts</h2>
+      <p>
+        If you purchase FocusGuard Premium, we store your email address and purchase information to verify your subscription status. This data is processed securely and is not shared with third parties for marketing.
+      </p>
+
+      <h2>Third-party services</h2>
+      <p>
+        FocusGuard does not use third-party analytics, ad networks, or tracking pixels. There are no external servers receiving your browsing data.
+      </p>
+
+      <h2>Export and import</h2>
+      <p>
+        You may export your FocusGuard data for backup and import it later. Exports exclude sensitive information such as your password hash.
+      </p>
+
+      <h2>Changes to this policy</h2>
+      <p>
+        We may update this policy to reflect product or legal changes. We will update the "Last updated" date above when changes occur.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions or concerns? Email us at <a href="mailto:info@visionion.dev">info@visionion.dev</a>.
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer-copy">© <span id="year"></span> Visionion. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/focusguard/privacy-policy.html">Privacy</a>
+        <a href="/focusguard/terms.html">Terms</a>
+        <a href="/focusguard/refund-policy.html">Refunds</a>
+        <a href="/focusguard/contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+

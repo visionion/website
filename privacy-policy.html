@@ -5,32 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy — Visionion</title>
   <meta name="description" content="Privacy Policy for Visionion. Learn how we handle your information." />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Privacy Policy — Visionion" />
   <meta property="og:description" content="We respect your privacy. We only collect information you voluntarily provide, and we never sell your data." />
   <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://visionion.dev/privacy-policy.html" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="container">
-    <section class="hero">
-      <h1>Privacy Policy</h1>
-      <p class="subtitle">Last updated: December 15, 2025</p>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <span class="logo-icon">V</span>
+        <span class="logo-text">Visionion</span>
+      </a>
+      <div class="nav-links">
+        <a href="/#apps" class="nav-link">Apps</a>
+        <a href="/#policies" class="nav-link">Policies</a>
+      </div>
+    </div>
+  </nav>
 
+  <main class="page-container">
+    <a href="/" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Back to Home
+    </a>
+
+    <header class="page-header">
+      <h1 class="page-title">Privacy Policy</h1>
+      <p class="page-subtitle">Last updated: December 15, 2025</p>
+    </header>
+
+    <div class="page-content">
       <p>
         We respect your privacy. We only collect information that you voluntarily provide to us
-        (for example, when you contact us). We do not sell or share your personal information with
+        (for example, when you contact us or subscribe to our newsletter). We do not sell or share your personal information with
         third parties for marketing purposes.
       </p>
 
       <h2>Information we collect</h2>
-      <p>
-        - Contact information you provide (such as your email address)<br />
-        - Any communication you send to us
-      </p>
+      <ul>
+        <li>Contact information you provide (such as your email address)</li>
+        <li>Any communication you send to us</li>
+        <li>Newsletter subscription data (name and email, if you subscribe)</li>
+      </ul>
 
       <h2>How we use your information</h2>
       <p>
-        We use your information to respond to inquiries, provide support, and improve our products.
+        We use your information to respond to inquiries, provide support, send product updates (if subscribed), and improve our products.
       </p>
 
       <h2>Data retention</h2>
@@ -47,16 +80,19 @@
       <p>
         If you have questions about this policy, contact us at <a href="mailto:info@visionion.dev">info@visionion.dev</a>.
       </p>
-    </section>
+    </div>
   </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Better Applications</p>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="logo-icon">V</span>
+        <span>Visionion</span>
+      </div>
+      <p class="footer-copy">© <span id="year"></span> Visionion. Built with care.</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-
-
-

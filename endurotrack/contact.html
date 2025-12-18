@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — EnduroTrack</title>
+  <meta name="description" content="Contact EnduroTrack support for help, feedback, or inquiries." />
+
+  <meta property="og:title" content="Contact — EnduroTrack" />
+  <meta property="og:description" content="Get in touch with EnduroTrack support." />
+  <meta property="og:type" content="article" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    :root {
+      --accent-app: #f97316;
+      --accent-app-dim: rgba(249, 115, 22, 0.15);
+    }
+    .page-content ul li::before { background: var(--accent-app); }
+    .page-content a { color: var(--accent-app); }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/endurotrack/" class="nav-logo">
+        <span class="logo-icon" style="background: var(--accent-app-dim); color: var(--accent-app);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </span>
+        <span class="logo-text">EnduroTrack</span>
+      </a>
+      <div class="nav-links">
+        <a href="/" class="nav-link">Visionion</a>
+        <a href="/endurotrack/" class="nav-link">Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-container">
+    <a href="/endurotrack/" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Back to EnduroTrack
+    </a>
+
+    <header class="page-header">
+      <h1 class="page-title">Contact EnduroTrack</h1>
+      <p class="page-subtitle">We'd love to hear from you</p>
+    </header>
+
+    <div class="page-content">
+      <h2>Get in touch</h2>
+      <p>
+        For EnduroTrack support, feedback, or general inquiries, email us at <a href="mailto:info@visionion.dev">info@visionion.dev</a>.
+      </p>
+
+      <h2>Support requests</h2>
+      <p>
+        Having issues with EnduroTrack? Please include:
+      </p>
+      <ul>
+        <li>Your iPhone model and iOS version</li>
+        <li>EnduroTrack version (found in app settings)</li>
+        <li>A description of the issue</li>
+        <li>Screenshots if helpful</li>
+      </ul>
+
+      <h2>Premium support</h2>
+      <p>
+        EnduroTrack Premium subscribers receive priority support. Please include your Apple ID email in your message for faster assistance.
+      </p>
+
+      <h2>Feature requests</h2>
+      <p>
+        Have ideas for new features? We'd love to hear them! Send us an email describing what you'd like to see in EnduroTrack.
+      </p>
+
+      <h2>Response time</h2>
+      <p>
+        We typically respond within 1–2 business days.
+      </p>
+
+      <h2>Important note</h2>
+      <p>
+        EnduroTrack is not a medical device. If you have health concerns, please consult a qualified healthcare professional. For medical emergencies, call emergency services immediately.
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer-copy">© <span id="year"></span> Visionion. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/endurotrack/privacy-policy.html">Privacy</a>
+        <a href="/endurotrack/terms.html">Terms</a>
+        <a href="/endurotrack/refund-policy.html">Refunds</a>
+        <a href="/endurotrack/contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+

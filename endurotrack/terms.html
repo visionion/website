@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms & Conditions — EnduroTrack</title>
+  <meta name="description" content="Terms & Conditions for using EnduroTrack." />
+
+  <meta property="og:title" content="Terms & Conditions — EnduroTrack" />
+  <meta property="og:description" content="Please read these terms before using EnduroTrack." />
+  <meta property="og:type" content="article" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    :root {
+      --accent-app: #f97316;
+      --accent-app-dim: rgba(249, 115, 22, 0.15);
+    }
+    .page-content ul li::before { background: var(--accent-app); }
+    .page-content a { color: var(--accent-app); }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/endurotrack/" class="nav-logo">
+        <span class="logo-icon" style="background: var(--accent-app-dim); color: var(--accent-app);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </span>
+        <span class="logo-text">EnduroTrack</span>
+      </a>
+      <div class="nav-links">
+        <a href="/" class="nav-link">Visionion</a>
+        <a href="/endurotrack/" class="nav-link">Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-container">
+    <a href="/endurotrack/" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Back to EnduroTrack
+    </a>
+
+    <header class="page-header">
+      <h1 class="page-title">EnduroTrack Terms & Conditions</h1>
+      <p class="page-subtitle">Last updated: December 15, 2025</p>
+    </header>
+
+    <div class="page-content">
+      <h2>Acceptance of terms</h2>
+      <p>
+        By downloading, installing, or using EnduroTrack, you agree to these Terms & Conditions. If you do not agree, please do not use EnduroTrack.
+      </p>
+
+      <h2>Description of service</h2>
+      <p>
+        EnduroTrack is an iOS app that provides health and wellness insights based on data from Apple HealthKit. It offers both free and premium subscription features.
+      </p>
+
+      <h2>Not medical advice</h2>
+      <p>
+        <strong>Important:</strong> EnduroTrack provides informational insights only. It is not a medical device and does not provide:
+      </p>
+      <ul>
+        <li>Medical diagnosis</li>
+        <li>Treatment recommendations</li>
+        <li>Emergency services</li>
+        <li>Professional health advice</li>
+      </ul>
+      <p>
+        Always consult a qualified healthcare professional for medical advice. Do not disregard professional medical advice or delay seeking it because of information from EnduroTrack.
+      </p>
+
+      <h2>Subscriptions</h2>
+      <p>
+        EnduroTrack Premium is available as a subscription through the App Store. Payments are processed by Apple. By subscribing, you agree to Apple's terms and the pricing displayed in the app.
+      </p>
+      <ul>
+        <li>Subscriptions automatically renew unless cancelled</li>
+        <li>Cancel anytime in your App Store account settings</li>
+        <li>Cancellation takes effect at the end of the current billing period</li>
+      </ul>
+
+      <h2>License</h2>
+      <p>
+        We grant you a limited, non-exclusive, non-transferable license to use EnduroTrack for personal, non-commercial purposes. You may not reverse engineer, modify, or redistribute EnduroTrack.
+      </p>
+
+      <h2>Intellectual property</h2>
+      <p>
+        All content, trademarks, and code related to EnduroTrack are owned by Visionion. You may not copy, modify, or distribute without permission.
+      </p>
+
+      <h2>Disclaimer</h2>
+      <p>
+        EnduroTrack is provided "as is" without warranties of any kind. We are not liable for any damages arising from use, including but not limited to health decisions made based on app insights.
+      </p>
+
+      <h2>Changes to terms</h2>
+      <p>
+        We may update these terms from time to time. Continued use of EnduroTrack after changes constitutes acceptance of the updated terms.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions about these terms? Email us at <a href="mailto:info@visionion.dev">info@visionion.dev</a>.
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer-copy">© <span id="year"></span> Visionion. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/endurotrack/privacy-policy.html">Privacy</a>
+        <a href="/endurotrack/terms.html">Terms</a>
+        <a href="/endurotrack/refund-policy.html">Refunds</a>
+        <a href="/endurotrack/contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+
