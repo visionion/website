@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sleep Tracking Basics: What Metrics Actually Matter — Visionion Blog</title>
+  <meta name="description" content="Cut through the noise of sleep tracking data. Learn which metrics are meaningful and how to use them to improve your sleep." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://visionion.dev/sleep-tracking-basics-what-metrics-actually-matter/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sleep Tracking Basics: What Metrics Actually Matter" />
+  <meta property="og:description" content="Cut through the noise of sleep tracking data. Learn which metrics are meaningful and how to use them to improve your sleep." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://visionion.dev/sleep-tracking-basics-what-metrics-actually-matter/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sleep Tracking Basics: What Metrics Actually Matter" />
+  <meta name="twitter:description" content="Cut through the noise of sleep tracking data. Learn which metrics are meaningful and how to use them to improve your sleep." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23000'/%3E%3Cpolygon points='16,24 6,10 26,10' fill='%23fff'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-primary: #09090b;
+      --bg-secondary: #18181b;
+      --bg-card: #1c1c21;
+      --bg-elevated: #27272a;
+      
+      --text-primary: #fafafa;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      
+      --border-color: #27272a;
+      --border-subtle: #3f3f46;
+      
+      --accent-focusguard: #10b981;
+      --accent-snapp: #8b5cf6;
+      --accent-endurotrack: #f97316;
+      
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      
+      --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Navigation */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(9, 9, 11, 0.8);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: #000;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-icon svg { width: 18px; height: 18px; fill: #fff; }
+
+    .nav-links { display: flex; gap: 2rem; }
+
+    .nav-link {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover { color: var(--text-primary); }
+
+    /* Main Content */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 8rem 2rem 4rem;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 2rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 600;
+    }
+
+    .footer-brand .logo-icon { width: 28px; height: 28px; }
+
+    .footer-copy {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Blog Index Styles */
+    .blog-header {
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .blog-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-subtitle {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+    }
+
+    .category-nav {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .category-link {
+      padding: 0.5rem 1rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-color);
+      border-radius: 100px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .category-link:hover,
+    .category-link.active {
+      background: var(--text-primary);
+      color: var(--bg-primary);
+      border-color: var(--text-primary);
+    }
+
+    .posts-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .post-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .post-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-subtle);
+    }
+
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .post-category {
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .post-category.focusguard { background: rgba(16, 185, 129, 0.15); color: var(--accent-focusguard); }
+    .post-category.snapp { background: rgba(139, 92, 246, 0.15); color: var(--accent-snapp); }
+    .post-category.endurotrack { background: rgba(249, 115, 22, 0.15); color: var(--accent-endurotrack); }
+
+    .post-date {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .post-card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .post-excerpt {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* Article Styles */
+    .article-header {
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover { color: var(--text-primary); }
+    .back-link svg { width: 16px; height: 16px; }
+
+    .article-title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Article Content */
+    .article-content {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .article-content h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .article-content h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+    }
+
+    .article-content p {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .article-content ul, .article-content ol {
+      margin: 1.5rem 0;
+      padding-left: 1.5rem;
+      color: var(--text-secondary);
+    }
+
+    .article-content li {
+      margin-bottom: 0.75rem;
+    }
+
+    .article-content a {
+      color: var(--accent-focusguard);
+      text-decoration: none;
+    }
+
+    .article-content a:hover { text-decoration: underline; }
+
+    .article-content strong { color: var(--text-primary); }
+
+    .article-content code {
+      background: var(--bg-elevated);
+      padding: 0.15rem 0.4rem;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-size: 0.9em;
+    }
+
+    .article-content blockquote {
+      border-left: 3px solid var(--accent-focusguard);
+      padding-left: 1.5rem;
+      margin: 1.5rem 0;
+      color: var(--text-secondary);
+      font-style: italic;
+    }
+
+    /* CTA Box */
+    .cta-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .cta-box h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-box p {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--text-primary);
+      color: var(--bg-primary);
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+
+    .cta-btn:hover { opacity: 0.9; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      main { padding: 7rem 1.5rem 3rem; }
+      .footer-container { flex-direction: column; text-align: center; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <span class="logo-icon"><svg viewBox="0 0 24 24"><polygon points="12,20 3,6 21,6"/></svg></span>
+        <span class="logo-text">Visionion</span>
+      </a>
+      <div class="nav-links">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="/#apps" class="nav-link">Apps</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    
+<a href="/blog/" class="back-link">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M19 12H5M12 19l-7-7 7-7"/>
+  </svg>
+  Back to Blog
+</a>
+
+<article>
+  <header class="article-header">
+    <h1 class="article-title">Sleep Tracking Basics: What Metrics Actually Matter</h1>
+    <div class="article-meta">
+      <span class="post-category endurotrack">endurotrack</span>
+      <time class="post-date" datetime="2024-11-30">November 30, 2024</time>
+    </div>
+  </header>
+
+  <div class="article-content">
+    <p>Sleep trackers generate an overwhelming amount of data: sleep stages, heart rate, movement, breathing, temperature, and proprietary scores. It's easy to get lost in the numbers without actually understanding what matters.</p>
+<p>Let's simplify. Here are the sleep metrics worth paying attention to—and what you can safely ignore.</p>
+<h2>The Metrics That Matter</h2>
+<h3>Total Sleep Time</h3>
+<p>The most fundamental metric: how much did you sleep? Most adults need 7-9 hours. Consistently falling short affects nearly every aspect of health and performance.</p>
+<p>This is the one number everyone should track. Everything else is supplementary.</p>
+<h3>Sleep Consistency</h3>
+<p>When you go to bed and wake up matters almost as much as how long you sleep. Irregular sleep schedules disrupt your circadian rhythm, reducing sleep quality even if total hours are adequate.</p>
+<p>Track your bedtime and wake time. Aim for consistency within 30 minutes, even on weekends.</p>
+<h3>Sleep Efficiency</h3>
+<p>Sleep efficiency is the percentage of time in bed actually spent sleeping. If you're in bed for 8 hours but asleep for only 6, your efficiency is 75%.</p>
+<p>Healthy sleep efficiency is typically above 85%. Lower efficiency might indicate difficulty falling asleep, frequent waking, or time spent lying awake.</p>
+<h3>Time to Fall Asleep (Sleep Latency)</h3>
+<p>How long it takes you to fall asleep after getting into bed. 10-20 minutes is typical. Very fast (under 5 minutes) might indicate sleep deprivation. Very slow (over 30 minutes) suggests difficulty winding down or poor sleep hygiene.</p>
+<h3>Wake After Sleep Onset (WASO)</h3>
+<p>How much time you spend awake after initially falling asleep. Brief awakenings are normal and often unremembered. Extended time awake during the night affects sleep quality and next-day function.</p>
+<h3>Resting Heart Rate During Sleep</h3>
+<p>Heart rate typically drops during sleep, especially during deep sleep. Elevated heart rate during sleep can indicate stress, illness, alcohol consumption, or poor recovery.</p>
+<h2>Metrics to Take with Caution</h2>
+<h3>Sleep Stage Breakdown</h3>
+<p>Consumer devices estimate time in light sleep, deep sleep, and REM sleep. These estimates are interesting but not highly accurate compared to clinical polysomnography.</p>
+<p>General guidance:</p>
+<ul>
+<li>Deep sleep is important for physical recovery. Adults typically get 1-2 hours.</li>
+<li>REM sleep supports cognitive function and memory. Adults typically get 1.5-2 hours.</li>
+<li>Light sleep is not &quot;bad&quot;—it's a normal and necessary part of sleep architecture.</li>
+</ul>
+<p>Don't stress about hitting specific stage targets. Focus on total sleep and how you feel, not the breakdown.</p>
+<h3>Sleep Quality Scores</h3>
+<p>Many apps provide a single &quot;sleep score&quot; that combines multiple factors. These can be useful for spotting trends but are often opaque in their calculation.</p>
+<p>Use scores as directional guidance, not absolute truth. A consistently declining score over weeks might indicate a problem worth investigating. Day-to-day fluctuations are usually noise.</p>
+<h3>Movement and Restlessness</h3>
+<p>Trackers measure movement during sleep. Some movement is normal. Excessive restlessness might indicate discomfort, sleep disorders, or environmental issues.</p>
+<p>Don't aim for zero movement—that's not realistic or necessary. Watch for patterns of unusual restlessness.</p>
+<h2>What to Actually Do with Sleep Data</h2>
+<h3>Identify Patterns</h3>
+<p>Track correlations between sleep metrics and lifestyle factors:</p>
+<ul>
+<li>Does alcohol affect your sleep quality?</li>
+<li>Does late eating affect your restlessness?</li>
+<li>Does screen time before bed affect time to fall asleep?</li>
+<li>Does exercise timing affect sleep?</li>
+</ul>
+<p>Your personal patterns are more valuable than generic advice.</p>
+<h3>Watch for Trends</h3>
+<p>A single bad night of sleep means little. A week of declining sleep quality is worth investigating. Look at 7-day and 30-day trends rather than obsessing over single nights.</p>
+<h3>Experiment Systematically</h3>
+<p>Make one change at a time and observe the effects over 1-2 weeks:</p>
+<ul>
+<li>Earlier bedtime</li>
+<li>Reduced evening caffeine</li>
+<li>Cooler bedroom temperature</li>
+<li>Less screen time before bed</li>
+<li>Consistent wake time</li>
+</ul>
+<p>Data helps you know if changes are actually working.</p>
+<h3>Don't Let Tracking Disrupt Sleep</h3>
+<p>Ironically, worrying about sleep metrics can make sleep worse. If checking your data first thing in the morning affects your mood or creates anxiety, consider checking less frequently—or only looking at weekly summaries.</p>
+<h2>Improving the Basics</h2>
+<p>Before diving into data optimization, make sure the fundamentals are solid:</p>
+<p><strong>Consistent schedule</strong> — Same bedtime and wake time daily, within 30 minutes.</p>
+<p><strong>Cool, dark, quiet environment</strong> — Optimize your bedroom for sleep.</p>
+<p><strong>Limit evening stimulants</strong> — Caffeine has a half-life of 5-6 hours. That afternoon coffee affects your sleep.</p>
+<p><strong>Wind-down routine</strong> — Give yourself 30-60 minutes of low-stimulation activity before bed.</p>
+<p><strong>Morning light exposure</strong> — Bright light in the morning helps regulate your circadian rhythm.</p>
+<p>These basics matter more than any tracking insight.</p>
+<h2>Important Caveats</h2>
+<p>Consumer sleep trackers are not medical devices. They're reasonable for general trends but shouldn't be used to diagnose sleep disorders. If you suspect a serious sleep issue—sleep apnea, insomnia, restless leg syndrome—see a healthcare provider.</p>
+<p>Also remember: how you feel matters more than what the data says. If you feel rested and function well during the day, your sleep is probably fine regardless of what your tracker reports.</p>
+<h2>The Bottom Line</h2>
+<p>Sleep tracking can provide useful insights, but most of the data is noise. Focus on:</p>
+<ul>
+<li>Total sleep time</li>
+<li>Sleep consistency</li>
+<li>Sleep efficiency</li>
+<li>Personal patterns and trends</li>
+</ul>
+<p>And always remember: the goal of sleep tracking is better sleep and better function, not a perfect score.</p>
+
+  </div>
+
+  
+  <div class="cta-box">
+    <h3>Want health insights that respect your privacy?</h3>
+    <p>EnduroTrack is coming soon. Join the waitlist to be first in line.</p>
+    <a href="/#newsletter" class="cta-btn">Join Waitlist</a>
+  </div>
+  
+</article>
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="logo-icon"><svg viewBox="0 0 24 24"><polygon points="12,20 3,6 21,6"/></svg></span>
+        <span>Visionion</span>
+      </div>
+      <p class="footer-copy">© 2024 Visionion. Built with care.</p>
+    </div>
+  </footer>
+</body>
+</html>
+

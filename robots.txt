@@ -1,0 +1,11 @@
+# Robots.txt for visionion.dev
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://visionion.dev/blog/sitemap.xml
+
+# Disallow admin/private paths (if any)
+Disallow: /google-credentials.json
+

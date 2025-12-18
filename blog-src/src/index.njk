@@ -1,0 +1,31 @@
+---
+layout: base.njk
+title: Blog
+description: Insights on productivity, screenshots, and health tracking from the Visionion team.
+---
+
+<header class="blog-header">
+  <h1 class="blog-title">Visionion Blog</h1>
+  <p class="blog-subtitle">Insights on productivity, screenshots, and health tracking.</p>
+</header>
+
+<nav class="category-nav">
+  <a href="/blog/" class="category-link active">All</a>
+  <a href="/blog/category/focusguard/" class="category-link">FocusGuard</a>
+  <a href="/blog/category/snapp/" class="category-link">Snapp</a>
+  <a href="/blog/category/endurotrack/" class="category-link">EnduroTrack</a>
+</nav>
+
+<div class="posts-list">
+  {%- for post in collections.posts -%}
+  <a href="/blog{{ post.url }}" class="post-card">
+    <div class="post-meta">
+      <span class="post-category {{ post.data.category }}">{{ post.data.category }}</span>
+      <time class="post-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+    </div>
+    <h2 class="post-card-title">{{ post.data.title }}</h2>
+    <p class="post-excerpt">{{ post.data.description }}</p>
+  </a>
+  {%- endfor -%}
+</div>
+
