@@ -78,11 +78,15 @@
 
       <h2>Permissions we request and why</h2>
       <ul>
-        <li><strong>storage</strong>: Save your preferences and data locally</li>
-        <li><strong>tabs</strong> and <strong>activeTab</strong>: Determine the current site to enforce your rules</li>
-        <li><strong>alarms</strong>: Run scheduled tasks (e.g., focus sessions, resets)</li>
-        <li><strong>declarativeNetRequest</strong> (+ feedback): Efficiently block matching sites by rule</li>
-        <li><strong>host permissions: <code>&lt;all_urls&gt;</code></strong>: Allow blocking on sites you choose across the web</li>
+        <li><strong>storage</strong>: Store user's blocked sites list, schedules, and settings locally</li>
+        <li><strong>tabs</strong>: Get the current tab's URL for usage tracking and "block current site" feature</li>
+        <li><strong>activeTab</strong>: Access current tab info when user clicks the extension icon</li>
+        <li><strong>alarms</strong>: Timer for Focus Mode countdown and daily usage reset</li>
+        <li><strong>declarativeNetRequest</strong>: Block/redirect network requests to user-specified websites</li>
+        <li><strong>declarativeNetRequestFeedback</strong>: Get feedback when requests are blocked for logging purposes</li>
+        <li><strong>notifications</strong>: Notify user when Focus Mode session completes</li>
+        <li><strong>webNavigation</strong>: Navigate to the blocked page when a blocked site is visited</li>
+        <li><strong>identity</strong>: Sign in with Google to get user information</li>
       </ul>
       <p>
         These permissions are used solely to provide core blocking functionality. FocusGuard does not send this information to external servers.
