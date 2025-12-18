@@ -6,7 +6,7 @@
 // Configuration
 const CONFIG = {
   app: 'converter',
-  googleClientId: '387675057644-46rstnghlmgj01uhcpvubihsl2jm5c2d.apps.googleusercontent.com',
+  googleClientId: '387675057644-69k4lh4j6m5hronf3eunp6qd1i4ulmfj.apps.googleusercontent.com',
   authApiUrl: 'https://e44zma7ej4d6uqov3zlf33sbre0oyvtj.lambda-url.us-east-1.on.aws/',
   paymentApiUrl: 'https://ixdhoc66ueb3bghpukzesddwsa0ovofg.lambda-url.us-east-1.on.aws/',
   razorpayKeyId: 'rzp_live_RsDxhp7JcQFQAl',
