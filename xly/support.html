@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support — Xly</title>
+  <meta name="description" content="Get help and support for Xly, the intentional X client for Mac." />
+
+  <meta property="og:title" content="Support — Xly" />
+  <meta property="og:description" content="Get help and support for Xly." />
+  <meta property="og:type" content="article" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231d9bf0'/%3E%3Cpath d='M7 7l7 9-7 9h2l6-7.5 5 7.5h5l-7-9.5 6.5-8.5h-2l-5.5 7-4.5-7H7z' fill='%23fff'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/xly/" class="nav-logo">
+        <span class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M5 5l5.5 7-5.5 7h1.5l5-6.25 4 6.25h4l-5.5-7.5 5-6.5h-1.5l-4.5 5.75-3.5-5.75H5z"/>
+          </svg>
+        </span>
+        <span class="logo-text">Xly</span>
+      </a>
+      <div class="nav-right">
+        <a href="/" class="nav-link">Visionion</a>
+        <a href="/xly/" class="nav-link">Xly</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-container">
+    <a href="/xly/" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Back to Xly
+    </a>
+
+    <header class="page-header">
+      <h1 class="page-title">Xly Support</h1>
+      <p class="page-subtitle">We're here to help</p>
+    </header>
+
+    <div class="page-content">
+      <h2>Get in touch</h2>
+      <p>
+        For Xly support, feedback, or general inquiries, email us at <a href="mailto:info@visionion.dev">info@visionion.dev</a>.
+      </p>
+
+      <h2>Frequently Asked Questions</h2>
+      
+      <p><strong>How does Xly work?</strong></p>
+      <p>
+        Xly loads X.com (Twitter) in a webview and provides organized access to different sections. DMs and Notifications are always available. Timeline and Bookmarks are limited to 5 minutes per hour to help you stay focused.
+      </p>
+
+      <p><strong>Is my X login secure?</strong></p>
+      <p>
+        Yes. When you log into X through Xly, your credentials go directly to X.com — we never see or store them. The app simply displays X.com content; we don't intercept anything.
+      </p>
+
+      <p><strong>Why 5 minutes per hour?</strong></p>
+      <p>
+        Research shows that 5 minutes is enough time to check what's important without falling into endless scrolling. You can always access DMs and notifications without limits.
+      </p>
+
+      <p><strong>Can I change the time limits?</strong></p>
+      <p>
+        Currently, the 5-minute limit is fixed by design. This intentional constraint is a core feature of Xly — it helps you use X mindfully rather than habitually.
+      </p>
+
+      <p><strong>Does Xly use the X API?</strong></p>
+      <p>
+        No. Xly does not use the X API. It simply displays X.com in a webview, which means there's no risk of API-related account issues.
+      </p>
+
+      <h2>Reporting issues</h2>
+      <p>
+        If you're experiencing problems with Xly, please include:
+      </p>
+      <ul>
+        <li>Your macOS version</li>
+        <li>Xly version (found in the app menu)</li>
+        <li>A description of the issue</li>
+        <li>Steps to reproduce the problem</li>
+        <li>Screenshots if helpful</li>
+      </ul>
+
+      <h2>Feature requests</h2>
+      <p>
+        Have an idea for Xly? We'd love to hear it! Email us your suggestions at <a href="mailto:info@visionion.dev">info@visionion.dev</a>.
+      </p>
+
+      <h2>Refunds</h2>
+      <p>
+        Xly is sold through the Mac App Store. Refund requests are handled by Apple according to their <a href="https://support.apple.com/en-us/HT204084" target="_blank" rel="noopener">refund policy</a>.
+      </p>
+
+      <h2>Response time</h2>
+      <p>
+        We typically respond within 1–2 business days.
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer-copy">© <span id="year"></span> Visionion. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/xly/privacy.html">Privacy</a>
+        <a href="/xly/support.html">Support</a>
+        <a href="/contact-us.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+

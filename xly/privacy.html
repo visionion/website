@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Xly</title>
+  <meta name="description" content="Xly Privacy Policy. We collect nothing. We track nothing. We have no servers." />
+
+  <meta property="og:title" content="Privacy Policy — Xly" />
+  <meta property="og:description" content="Xly does not collect, store, or transmit any user data. Period." />
+  <meta property="og:type" content="article" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231d9bf0'/%3E%3Cpath d='M7 7l7 9-7 9h2l6-7.5 5 7.5h5l-7-9.5 6.5-8.5h-2l-5.5 7-4.5-7H7z' fill='%23fff'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/xly/" class="nav-logo">
+        <span class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M5 5l5.5 7-5.5 7h1.5l5-6.25 4 6.25h4l-5.5-7.5 5-6.5h-1.5l-4.5 5.75-3.5-5.75H5z"/>
+          </svg>
+        </span>
+        <span class="logo-text">Xly</span>
+      </a>
+      <div class="nav-right">
+        <a href="/" class="nav-link">Visionion</a>
+        <a href="/xly/" class="nav-link">Xly</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-container">
+    <a href="/xly/" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Back to Xly
+    </a>
+
+    <header class="page-header">
+      <h1 class="page-title">Xly Privacy Policy</h1>
+      <p class="page-subtitle">Last updated: December 20, 2025</p>
+    </header>
+
+    <div class="page-content">
+      <h2>The Short Version</h2>
+      <p>
+        <strong>We collect nothing. We track nothing. We have no servers.</strong>
+      </p>
+
+      <h2>Data Collection: None</h2>
+      <p>
+        Xly does not collect, store, or transmit any user data. Period. We have no analytics, no crash reporting, and no tracking of any kind.
+      </p>
+
+      <h2>Servers: None</h2>
+      <p>
+        Xly has no backend servers. The app runs entirely on your Mac. There is no cloud component, no user database, and no way for us to access your data — because we don't want to.
+      </p>
+
+      <h2>Analytics: None</h2>
+      <p>
+        We don't use any analytics tools, crash reporting services, or tracking pixels. We have no idea how you use the app, and that's by design.
+      </p>
+
+      <h2>Your X Data: Stays with X</h2>
+      <p>
+        When you log into X through Xly, your credentials go directly to X.com (twitter.com). We never see, store, or have access to your login information. The app simply displays X.com content in a webview — we don't intercept, modify, or store any of it.
+      </p>
+
+      <h2>Local Storage: Minimal</h2>
+      <p>
+        Xly stores only the following data locally on your Mac:
+      </p>
+      <ul>
+        <li>Your theme preference (light or dark mode)</li>
+        <li>Timer state for timeline and bookmarks limits</li>
+      </ul>
+      <p>
+        This data is stored using standard macOS storage and never leaves your device. It is not synced to any cloud service.
+      </p>
+
+      <h2>Network Access: X.com Only</h2>
+      <p>
+        Xly only connects to X.com (twitter.com) and its content delivery networks (CDN) for loading timeline content, DMs, notifications, and media. No other network requests are made. We do not connect to any Visionion servers or third-party services.
+      </p>
+
+      <h2>Third-Party Services: None</h2>
+      <p>
+        Xly does not integrate with any third-party services, APIs, or SDKs. There are no ads, no affiliate links, and no sponsored content.
+      </p>
+
+      <h2>Children's Privacy</h2>
+      <p>
+        Xly does not collect any personal information from anyone, including children. Since we collect no data, there is no data about children to protect.
+      </p>
+
+      <h2>Changes to This Policy</h2>
+      <p>
+        We may update this policy to reflect product changes or legal requirements. We will update the "Last updated" date above when changes occur. Our commitment to collecting zero data will not change.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions or concerns about privacy? Email us at <a href="mailto:privacy@visionion.dev">privacy@visionion.dev</a>.
+      </p>
+
+      <p style="margin-top: 2rem; padding: 1rem; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+        <strong>That's it. Your privacy is absolute.</strong>
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer-copy">© <span id="year"></span> Visionion. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/xly/privacy.html">Privacy</a>
+        <a href="/xly/support.html">Support</a>
+        <a href="/contact-us.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+
