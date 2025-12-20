@@ -5,7 +5,7 @@ if (yearEl) {
 }
 
 // Newsletter Lambda Function URL
-const NEWSLETTER_API_URL = 'https://uvtqsb7vci7i2fknd6cp5xheyi0qordp.lambda-url.us-east-1.on.aws/';
+const NEWSLETTER_API_URL = 'https://dqkt3fisl2msjgo2oepljdtndq0kgwba.lambda-url.us-east-1.on.aws/';
 
 /**
  * Shows a message to the user
