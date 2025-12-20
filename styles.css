@@ -19,6 +19,8 @@
   --accent-converter-dim: rgba(99, 102, 241, 0.15);
   --accent-xly: #1d9bf0;
   --accent-xly-dim: rgba(29, 155, 240, 0.15);
+  --accent-voxly: #f97316;
+  --accent-voxly-dim: rgba(249, 115, 22, 0.15);
   
   --radius-sm: 6px;
   --radius-md: 10px;
@@ -309,6 +311,18 @@ body {
 
 .xly-card .app-features svg {
   color: var(--accent-xly);
+}
+
+.voxly-card:hover {
+  box-shadow: 0 20px 60px -15px rgba(249, 115, 22, 0.2);
+}
+
+.voxly-card .app-card-glow {
+  background: radial-gradient(ellipse at top, var(--accent-voxly-dim) 0%, transparent 70%);
+}
+
+.voxly-card .app-features svg {
+  color: var(--accent-voxly);
 }
 
 .app-icon {
