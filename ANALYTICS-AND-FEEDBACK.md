@@ -32,6 +32,9 @@ are tracked independently in the dashboard.
 | visionion.dev | `visionion/website` | `81cd5e2f2c794625b7c0d4867208548d` |
 | voxly.visionion.dev | `visionion/voxly-site` | `98fffaa4caee42f7ad769147ef4cd9d4` |
 | xly.visionion.dev | `visionion/xly-site` | `11608d0167ea4527a78e1bbecdcd3f57` |
+| devinspector.visionion.dev | `visionion/devinspector-site` | _TODO: add CF token_ |
+| snapp.visionion.dev | `visionion/snapp-site` | _TODO: add CF token_ |
+| focusguard.visionion.dev | `visionion/focusguard-site` | _TODO: add CF token_ |
 
 - View traffic: https://dash.cloudflare.com → **Analytics & Logs → Web Analytics**.
 
