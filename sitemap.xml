@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://visionion.dev/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://visionion.dev/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visionion.dev/contact-us.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://visionion.dev/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://visionion.dev/terms-and-conditions.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://visionion.dev/refund-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://visionion.dev/shipping-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://visionion.dev/cancellation-and-refund.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://visionion.dev/blog/category/endurotrack/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://visionion.dev/blog/category/focusguard/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://visionion.dev/blog/category/snapp/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://visionion.dev/blog/5-browser-extensions-every-remote-worker-needs/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://visionion.dev/blog/annotating-screenshots-tips-for-better-visual-communication/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://visionion.dev/blog/best-practices-for-bug-reporting-with-screenshots/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://visionion.dev/blog/blurring-sensitive-information-in-screenshots/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://visionion.dev/blog/building-healthy-habits-with-activity-tracking/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://visionion.dev/blog/creating-an-effective-focus-schedule-for-deep-work/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://visionion.dev/blog/digital-minimalism-reducing-screen-time-without-missing-out/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://visionion.dev/blog/how-to-block-distracting-websites-and-stay-productive/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://visionion.dev/blog/how-to-take-full-page-screenshots-in-any-browser/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://visionion.dev/blog/how-website-blockers-actually-improve-your-mental-health/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://visionion.dev/blog/privacy-first-health-apps-why-your-data-should-stay-local/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://visionion.dev/blog/recovery-vs-training-finding-your-balance/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://visionion.dev/blog/screenshot-organization-keeping-your-captures-tidy/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://visionion.dev/blog/screenshot-to-pdf-complete-guide-to-exporting-and-sharing/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://visionion.dev/blog/sleep-tracking-basics-what-metrics-actually-matter/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://visionion.dev/blog/the-pomodoro-technique-a-complete-guide-to-focused-work/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://visionion.dev/blog/the-science-of-readiness-scores-explained/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://visionion.dev/blog/understanding-hrv-what-your-heart-rate-variability-says/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+</urlset>
