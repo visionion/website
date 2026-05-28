@@ -24,15 +24,16 @@ clicks for the *website*, never the app.
 
 ### Status: configured ✅
 
-A single Cloudflare Web Analytics beacon token is used across all three sites
-(`visionion.dev`, `voxly.visionion.dev`, `xly.visionion.dev`). Cloudflare's
-dashboard breaks traffic down per hostname, so one token covers everything.
+Each site has its own dedicated Cloudflare Web Analytics beacon token, so they
+are tracked independently in the dashboard.
 
-- Token: `81cd5e2f2c794625b7c0d4867208548d`
-- Embedded in: `visionion/website/index.html`, `visionion/voxly-site/index.html`,
-  `visionion/xly-site/index.html`.
-- View traffic: https://dash.cloudflare.com → **Analytics & Logs → Web Analytics**
-  (filter by hostname to see each site).
+| Site | Repo | Beacon token |
+|------|------|--------------|
+| visionion.dev | `visionion/website` | `81cd5e2f2c794625b7c0d4867208548d` |
+| voxly.visionion.dev | `visionion/voxly-site` | `98fffaa4caee42f7ad769147ef4cd9d4` |
+| xly.visionion.dev | `visionion/xly-site` | `11608d0167ea4527a78e1bbecdcd3f57` |
+
+- View traffic: https://dash.cloudflare.com → **Analytics & Logs → Web Analytics**.
 
 Note: `visionion.dev` DNS is **not** on Cloudflare — that's fine. Web Analytics
 is a JS beacon and works regardless of where DNS is hosted.
