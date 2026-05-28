@@ -10,6 +10,9 @@ This documents the architecture for `visionion.dev` and per-app subdomains, and 
 | Main landing page | `visionion/website` | GitHub Pages | `visionion.dev` |
 | Voxly | `visionion/voxly-site` | GitHub Pages | `voxly.visionion.dev` |
 | Xly | `visionion/xly-site` | GitHub Pages | `xly.visionion.dev` |
+| DevInspector | `visionion/devinspector-site` | GitHub Pages | `devinspector.visionion.dev` |
+| Snapp | `visionion/snapp-site` | GitHub Pages | `snapp.visionion.dev` |
+| FocusGuard | `visionion/focusguard-site` | GitHub Pages | `focusguard.visionion.dev` |
 
 Each app gets its **own public repo + subdomain** for clean SEO. Add future apps the
 same way: create `visionion/<app>-site`, add a `CNAME` file with `<app>.visionion.dev`,
@@ -23,7 +26,10 @@ At whatever manages DNS for `visionion.dev` (registrar / Cloudflare / Route 53),
 ```
 Type   Name    Value                    TTL
 CNAME  voxly   visionion.github.io      3600
-CNAME  xly     visionion.github.io      3600
+CNAME  xly           visionion.github.io      3600
+CNAME  devinspector  visionion.github.io      3600
+CNAME  snapp         visionion.github.io      3600
+CNAME  focusguard    visionion.github.io      3600
 ```
 
 > The apex `visionion.dev` keeps its existing records (A records to GitHub Pages IPs
