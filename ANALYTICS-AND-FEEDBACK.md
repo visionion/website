@@ -38,11 +38,23 @@ are tracked independently in the dashboard.
 Note: `visionion.dev` DNS is **not** on Cloudflare — that's fine. Web Analytics
 is a JS beacon and works regardless of where DNS is hosted.
 
-### Optional: track download-button clicks
+### Download conversion tracking (visit → download)
 
-Cloudflare auto-tracks page views. To also see download conversions, you can
-later add a tiny `data-cf-beacon` event on the download buttons — ask and we'll
-wire it up.
+Cloudflare Web Analytics tracks page views (not arbitrary click events). To
+measure how many visitors actually download, the "Download" buttons point to a
+lightweight **`/download.html`** page instead of linking the DMG directly. That
+page:
+1. is recorded by the beacon as a pageview for the `/download.html` path, then
+2. auto-redirects to the DMG (`/Voxly.dmg` or `/Xly.dmg`) after ~0.8s.
+
+**To read the conversion rate** in the Cloudflare dashboard (Web Analytics →
+the relevant site):
+- Look at pageviews for `/` (visits) vs `/download.html` (download intents).
+- `conversion ≈ /download.html views ÷ / views`.
+
+For raw completed-download counts (not just intent), use `./scripts/stats.sh`
+(GitHub Releases). Comparing the two also reveals how many download-page hits
+turn into actual file downloads.
 
 ## 3. Feedback (user-initiated, nothing automatic)
 
