@@ -22,22 +22,20 @@ Cloudflare Web Analytics beacon. It is **cookieless, collects no personal data,
 and is GDPR-friendly** — it only measures page views and (optionally) button
 clicks for the *website*, never the app.
 
-### One-time setup (replace the placeholder token)
+### Status: configured ✅
 
-1. Go to https://dash.cloudflare.com → **Analytics** → **Web Analytics**.
-2. Add a site for `voxly.visionion.dev` and another for `xly.visionion.dev`
-   (or one site covering both). Cloudflare gives you a **site token**.
-3. In each repo's `index.html`, replace `YOUR_CF_TOKEN` in this snippet:
-   ```html
-   <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-           data-cf-beacon='{"token": "YOUR_CF_TOKEN"}'></script>
-   ```
-   - `visionion/voxly-site/index.html`
-   - `visionion/xly-site/index.html`
-4. Commit & push. Traffic appears in the Cloudflare dashboard within minutes.
+A single Cloudflare Web Analytics beacon token is used across all three sites
+(`visionion.dev`, `voxly.visionion.dev`, `xly.visionion.dev`). Cloudflare's
+dashboard breaks traffic down per hostname, so one token covers everything.
 
-> Until the real token is set, the beacon is inert (no data sent). The site
-> works fine either way.
+- Token: `81cd5e2f2c794625b7c0d4867208548d`
+- Embedded in: `visionion/website/index.html`, `visionion/voxly-site/index.html`,
+  `visionion/xly-site/index.html`.
+- View traffic: https://dash.cloudflare.com → **Analytics & Logs → Web Analytics**
+  (filter by hostname to see each site).
+
+Note: `visionion.dev` DNS is **not** on Cloudflare — that's fine. Web Analytics
+is a JS beacon and works regardless of where DNS is hosted.
 
 ### Optional: track download-button clicks
 
