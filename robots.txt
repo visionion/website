@@ -3,9 +3,9 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+# Sitemaps
+Sitemap: https://visionion.dev/sitemap.xml
 Sitemap: https://visionion.dev/blog/sitemap.xml
 
-# Disallow admin/private paths (if any)
+# Disallow private paths
 Disallow: /google-credentials.json
-
