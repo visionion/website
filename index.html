@@ -14,14 +14,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0a0a0a" />
   <title>Visionion - Thoughtful Software for Everyday Life</title>
-  <meta name="description" content="Visionion creates thoughtful, practical software — FocusGuard, Snapp, Tabby, Xly, Voxly, and DevInspector. Privacy-first apps for productivity." />
+  <meta name="description" content="Visionion creates thoughtful, practical software — Cipher, FocusGuard, Snapp, Tabby, Xly, Voxly, and DevInspector. Privacy-first apps for productivity." />
 
   <!-- Canonical -->
   <link rel="canonical" href="https://visionion.dev/" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Visionion - Thoughtful Software" />
-  <meta property="og:description" content="FocusGuard, Snapp, Tabby, Xly, Voxly, DevInspector. Privacy-first productivity apps built with care." />
+  <meta property="og:description" content="Cipher, FocusGuard, Snapp, Tabby, Xly, Voxly, DevInspector. Privacy-first productivity apps built with care." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://visionion.dev" />
   <meta property="og:image" content="https://visionion.dev/og-image.png" />
@@ -29,7 +29,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Visionion - Thoughtful Software for Everyday Life" />
-  <meta name="twitter:description" content="FocusGuard, Snapp, Tabby, Xly, Voxly, DevInspector. Privacy-first productivity apps built with care." />
+  <meta name="twitter:description" content="Cipher, FocusGuard, Snapp, Tabby, Xly, Voxly, DevInspector. Privacy-first productivity apps built with care." />
   <meta name="twitter:image" content="https://visionion.dev/og-image.png" />
 
   <!-- Favicon -->
@@ -68,7 +68,8 @@
       { "@type": "ListItem", "position": 3, "name": "Xly", "url": "https://xly.visionion.dev/" },
       { "@type": "ListItem", "position": 4, "name": "Voxly", "url": "https://voxly.visionion.dev/" },
       { "@type": "ListItem", "position": 5, "name": "DevInspector", "url": "https://devinspector.visionion.dev/" },
-      { "@type": "ListItem", "position": 6, "name": "Tabby", "url": "https://tabby.visionion.dev/" }
+      { "@type": "ListItem", "position": 6, "name": "Tabby", "url": "https://tabby.visionion.dev/" },
+      { "@type": "ListItem", "position": 7, "name": "Cipher", "url": "https://cipher.visionion.dev/" }
     ]
   }
   </script>
@@ -143,6 +144,9 @@
           </p>
           <p>
             <strong>Tabby</strong> is our local-first tab session manager for Chrome. Save windows as named sessions, fuzzy-search across every open tab, recover accidentally-closed windows, and find duplicate tabs in one click. Everything lives in <code>chrome.storage.local</code> — no servers, no accounts, no tracking.
+          </p>
+          <p>
+            <strong>Cipher</strong> is our privacy-first browser extension that strips tracking parameters from URLs (utm_*, fbclid, gclid and dozens more) and blocks tracking pixels before they ever load. It runs entirely on your device using Chrome's <code>declarativeNetRequest</code> API — no remote rulelist, no telemetry, no account. MIT-licensed and fully open source.
           </p>
           <p>
             We're always working on new ideas and improvements. Subscribe to our newsletter below to stay updated on new releases, feature updates, and exclusive early access opportunities.
@@ -453,6 +457,53 @@
           </div>
           <div class="app-actions">
             <a href="https://tabby.visionion.dev/" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                <path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/>
+              </svg>
+              Get it Free
+            </a>
+          </div>
+          <div class="app-badge">Free</div>
+        </div>
+
+        <!-- Cipher Card -->
+        <div class="app-card cipher-card">
+          <div class="app-card-glow"></div>
+          <div class="app-icon" style="background: rgba(20,184,166,0.15); color: #14b8a6;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="8" cy="15" r="4"/>
+              <path d="M10.85 12.15 19 4"/>
+              <path d="M18 5l2 2"/>
+              <path d="M15 8l2 2"/>
+            </svg>
+          </div>
+          <div class="app-content">
+            <h3 class="app-name">Cipher</h3>
+            <p class="app-tagline">Strip trackers. Stay clean.</p>
+            <p class="app-description">
+              Removes tracking parameters (utm_*, fbclid, gclid and dozens more) from URLs and blocks 30+ tracker hosts — entirely on your device, no remote rulelist, no telemetry.
+            </p>
+            <ul class="app-features">
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Strips 70+ tracking params
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Blocks 30+ tracker hosts
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Per-site allowlist
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                100% local — MIT-licensed, open source
+              </li>
+            </ul>
+          </div>
+          <div class="app-actions">
+            <a href="https://cipher.visionion.dev/" class="btn btn-primary">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
                 <path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/>
               </svg>
