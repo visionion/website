@@ -4,8 +4,8 @@ if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
-// Newsletter Lambda Function URL
-const NEWSLETTER_API_URL = 'https://dqkt3fisl2msjgo2oepljdtndq0kgwba.lambda-url.us-east-1.on.aws/';
+// Newsletter Lambda Function URL (account 069102306398, migrated 2026-06-14)
+const NEWSLETTER_API_URL = 'https://4a3m63bqg4t555mwrdopli3dee0vqsxi.lambda-url.us-east-1.on.aws/';
 
 /**
  * Shows a message to the user
